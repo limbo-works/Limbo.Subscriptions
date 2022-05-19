@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+    <!-- Generate XML documentation -->
+    <PropertyGroup>
+        <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
+        <Nullable>enable</Nullable>
+        <Version>1.0.0-preview.0</Version>
+        <Authors>nikcio</Authors>
+        <Company>Limbo</Company>
+        <Description>Persistence package for Limbo.Subscriptions</Description>
+        <PackageProjectUrl>https://github.com/limbo-works/Limbo.Umbraco.Subscriptions</PackageProjectUrl>
+        <PackageIcon>Limbo.png</PackageIcon>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <RepositoryUrl>https://github.com/limbo-works/Limbo.Umbraco.Subscriptions</RepositoryUrl>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    </PropertyGroup>
+    <ItemGroup>
+      <None Include="..\..\Limbo.png">
+        <Pack>True</Pack>
+        <PackagePath>\</PackagePath>
+      </None>
+      <None Include="..\..\README.md">
+        <Pack>True</Pack>
+        <PackagePath>\</PackagePath>
+      </None>
+    </ItemGroup>
+    <ItemGroup>
+      <PackageReference Include="Limbo.DataAccess" Version="2.0.0-preview.0" />
+    </ItemGroup>
+
+</Project>

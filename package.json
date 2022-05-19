@@ -1,0 +1,10 @@
+{
+  "version": "1.0.0-0",
+  "scripts": {
+    "release": "./release.bat && standard-version",
+    "debug": "./debug.bat"
+  },
+  "devDependencies": {
+    "standard-version": "^9.3.2"
+  }
+}

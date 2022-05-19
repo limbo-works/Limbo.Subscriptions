@@ -1,0 +1,47 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <Version>1.0.0-preview.0</Version>
+    <Authors>nikcio</Authors>
+    <Company>Limbo</Company>
+    <Description>A package for subscriptions on subscription items</Description>
+    <PackageProjectUrl>https://github.com/limbo-works/Limbo.Umbraco.Subscriptions</PackageProjectUrl>
+    <PackageIcon>Limbo.png</PackageIcon>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/limbo-works/Limbo.Umbraco.Subscriptions</RepositoryUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\Limbo.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Limbo.Subscriptions.Persistence\Limbo.Subscriptions.Persistence.csproj" />
+  </ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
+		<PackageReference Include="HotChocolate.AspNetCore" Version="12.8.1" />
+		<PackageReference Include="HotChocolate.AspNetCore.Authorization" Version="12.8.1" />
+		<PackageReference Include="HotChocolate.Data" Version="12.8.1" />
+		<PackageReference Include="HotChocolate.Data.EntityFramework" Version="12.8.1" />
+		<PackageReference Include="Limbo.MailSystem" Version="1.0.0-preview.0" />
+	</ItemGroup>
+
+  
+    <!-- Generate XML documentation -->
+    <PropertyGroup>
+        <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
+    </PropertyGroup>
+
+</Project>

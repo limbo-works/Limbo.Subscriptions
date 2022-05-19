@@ -1,0 +1,17 @@
+version: '3.4'
+
+services:
+  limbo.apiauthentication.testdatabase:
+    image: mcr.microsoft.com/mssql/server:latest
+    user: root
+    volumes:
+     - testdatabase:/var/opt/mssql/data
+    environment:
+     - ACCEPT_EULA=Y
+     - MSSQL_PID=Express
+     - SA_PASSWORD=kNKy4uJiLh!f96b8GMr!h
+    ports:
+     - "55020:1433" 
+
+volumes:
+  testdatabase:
