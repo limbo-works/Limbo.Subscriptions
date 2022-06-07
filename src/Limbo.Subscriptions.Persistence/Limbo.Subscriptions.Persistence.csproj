@@ -1,35 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
+    <Nullable>enable</Nullable>
+    <LangVersion>9.0</LangVersion>
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
-    <!-- Generate XML documentation -->
-    <PropertyGroup>
-        <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
-        <Nullable>enable</Nullable>
-        <Version>1.0.0-preview.0</Version>
-        <Authors>nikcio</Authors>
-        <Company>Limbo</Company>
-        <Description>Persistence package for Limbo.Subscriptions</Description>
-        <PackageProjectUrl>https://github.com/limbo-works/Limbo.Umbraco.Subscriptions</PackageProjectUrl>
-        <PackageIcon>Limbo.png</PackageIcon>
-        <PackageReadmeFile>README.md</PackageReadmeFile>
-        <RepositoryUrl>https://github.com/limbo-works/Limbo.Umbraco.Subscriptions</RepositoryUrl>
-        <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    </PropertyGroup>
-    <ItemGroup>
-      <None Include="..\..\Limbo.png">
-        <Pack>True</Pack>
-        <PackagePath>\</PackagePath>
-      </None>
-      <None Include="..\..\README.md">
-        <Pack>True</Pack>
-        <PackagePath>\</PackagePath>
-      </None>
-    </ItemGroup>
-    <ItemGroup>
-      <PackageReference Include="Limbo.EntityFramework" Version="2.0.0-beta002" />
-    </ItemGroup>
+  <PropertyGroup>
+    <Version>1.0.0-preview.0</Version>
+    <Company>Limbo</Company>
+    <Authors>nikcio</Authors>
+    <Copyright>Copyright © 2022</Copyright>
+    <Description>Persistence package for Limbo.Subscriptions.</Description>
+  </PropertyGroup>
+
+  <!-- Information for the NuGet package -->
+  <PropertyGroup>
+    <PackageId>Limbo.Subscriptions.Persistence</PackageId>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/limbo-works/Limbo.Subscriptions</PackageProjectUrl>
+    <PackageIcon>Limbo.png</PackageIcon>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/limbo-works/Limbo.Subscriptions</RepositoryUrl>
+  </PropertyGroup>
+  
+  <!-- Include NuGet dependencies -->
+  <ItemGroup>
+    <PackageReference Include="Limbo.EntityFramework" Version="2.0.0-beta002" />
+  </ItemGroup>
+
+  <!-- Include package icon and and readme for NuGet -->
+  <ItemGroup>
+    <None Include="..\..\Limbo.png" Pack="true" PackagePath="\" />
+    <None Include="..\..\README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+  <!-- Generate XML documentation -->
+  <PropertyGroup>
+    <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
+  </PropertyGroup>
 
 </Project>
