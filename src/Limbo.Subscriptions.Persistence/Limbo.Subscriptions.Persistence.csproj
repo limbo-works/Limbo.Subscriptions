@@ -9,7 +9,7 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <Version>1.0.0-preview.0</Version>
+    <Version>1.0.0-beta001</Version>
     <Company>Limbo</Company>
     <Authors>nikcio</Authors>
     <Copyright>Copyright © 2022</Copyright>
