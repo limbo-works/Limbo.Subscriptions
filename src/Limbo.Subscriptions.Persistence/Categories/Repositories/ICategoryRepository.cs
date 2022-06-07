@@ -1,5 +1,5 @@
 ﻿using System.Threading.Tasks;
-using Limbo.DataAccess.Repositories.Crud;
+using Limbo.EntityFramework.Repositories.Crud;
 using Limbo.Subscriptions.Persistence.Categories.Models;
 
 namespace Limbo.Subscriptions.Persistence.Categories.Repositories {

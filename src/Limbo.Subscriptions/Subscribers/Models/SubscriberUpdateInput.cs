@@ -2,6 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 
 namespace Limbo.Subscriptions.Subscribers.Models {
+    
     /// <summary>
     /// Model for updating a subscriber
     /// </summary>
@@ -43,4 +44,5 @@ namespace Limbo.Subscriptions.Subscribers.Models {
         [Required]
         public virtual int SubscriptionSystemId { get; set; }
     }
+
 }

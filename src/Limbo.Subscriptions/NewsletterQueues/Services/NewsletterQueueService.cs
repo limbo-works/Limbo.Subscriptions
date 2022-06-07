@@ -1,11 +1,11 @@
 ﻿using System.Data;
 using System.Net;
 using System.Threading.Tasks;
-using Limbo.DataAccess.Services;
-using Limbo.DataAccess.Services.Crud;
-using Limbo.DataAccess.Services.Models;
-using Limbo.DataAccess.Settings;
-using Limbo.DataAccess.UnitOfWorks;
+using Limbo.EntityFramework.Services;
+using Limbo.EntityFramework.Services.Crud;
+using Limbo.EntityFramework.Services.Models;
+using Limbo.EntityFramework.Settings;
+using Limbo.EntityFramework.UnitOfWorks;
 using Limbo.Subscriptions.Persistence.NewsletterQueues.Models;
 using Limbo.Subscriptions.Persistence.NewsletterQueues.Repositories;
 using Microsoft.Extensions.Logging;
@@ -15,7 +15,7 @@ namespace Limbo.Subscriptions.NewsletterQueues.Services {
     public class NewsletterQueueService : CrudServiceBase<NewsletterQueue, INewsletterQueueRepository>, INewsletterQueueService {
 
         /// <inheritdoc/>
-        public NewsletterQueueService(INewsletterQueueRepository repository, ILogger<ServiceBase<INewsletterQueueRepository>> logger, DataAccessSettings dataAccessSettings, IUnitOfWork<INewsletterQueueRepository> unitOfWork) : base(repository, logger, dataAccessSettings, unitOfWork) {
+        public NewsletterQueueService(INewsletterQueueRepository repository, ILogger<ServiceBase<INewsletterQueueRepository>> logger, EntityFrameworkSettings entityFrameworkSettings, IUnitOfWork<INewsletterQueueRepository> unitOfWork) : base(repository, logger, entityFrameworkSettings, unitOfWork) {
         }
 
         /// <inheritdoc/>
@@ -27,14 +27,14 @@ namespace Limbo.Subscriptions.NewsletterQueues.Services {
         /// <inheritdoc/>
         public virtual async Task<IServiceResponse<NewsletterQueue>> AddSubscriptionItems(int id, int[] subscriptionItemIds) {
             return await ExecuteServiceTask(async () => {
-                return await repository.AddSubscriptionItems(id, subscriptionItemIds);
+                return await Repository.AddSubscriptionItems(id, subscriptionItemIds);
             }, HttpStatusCode.Created, IsolationLevel.Serializable);
         }
 
         /// <inheritdoc/>
         public virtual async Task<IServiceResponse<NewsletterQueue>> RemoveSubscriptionItems(int id, int[] subscriptionItemIds) {
             return await ExecuteServiceTask(async () => {
-                return await repository.RemoveSubscriptionItems(id, subscriptionItemIds);
+                return await Repository.RemoveSubscriptionItems(id, subscriptionItemIds);
             }, HttpStatusCode.OK, IsolationLevel.Serializable);
         }
 

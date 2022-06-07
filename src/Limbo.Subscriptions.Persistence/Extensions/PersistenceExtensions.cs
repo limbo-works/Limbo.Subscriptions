@@ -1,4 +1,4 @@
-﻿using Limbo.DataAccess.Extensions;
+﻿using Limbo.EntityFramework.Extensions;
 using Limbo.Subscriptions.Persistence.Categories.Extensions;
 using Limbo.Subscriptions.Persistence.Contexts.Extensions;
 using Limbo.Subscriptions.Persistence.NewsletterQueues.Extensions;
@@ -8,10 +8,12 @@ using Limbo.Subscriptions.Persistence.SubscriptionSystems.Extensions;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Limbo.Subscriptions.Persistence.Extensions {
+
     /// <summary>
     /// Extensions
     /// </summary>
     public static class PersistenceExtensions {
+
         /// <summary>
         /// Adds persistence
         /// </summary>
@@ -26,9 +28,11 @@ namespace Limbo.Subscriptions.Persistence.Extensions {
                 .AddSubscribers()
                 .AddSubcriptionItems()
                 .AddSubscriptionSystems()
-                .AddDataAccess(subscriptionPersistenceOptions.DataAccessOptions);
+                .AddEntityFramework(subscriptionPersistenceOptions.DataAccessOptions);
 
             return services;
         }
+
     }
+
 }

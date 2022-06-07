@@ -1,15 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
-using Limbo.DataAccess.Models;
+using Limbo.EntityFramework.Models;
 using Limbo.Subscriptions.Persistence.Categories.Models;
 using Limbo.Subscriptions.Persistence.NewsletterQueues.Models;
 using Limbo.Subscriptions.Persistence.Subscribers.Models;
 
 namespace Limbo.Subscriptions.Persistence.SubscriptionItems.Models {
+
     /// <summary>
     /// Represents a subscription item
     /// </summary>
-    public class SubscriptionItem : GenericId {
+    public class SubscriptionItem : IGenericId {
         /// <summary>
         /// The unique id
         /// </summary>

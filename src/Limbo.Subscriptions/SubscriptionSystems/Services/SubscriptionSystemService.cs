@@ -1,9 +1,9 @@
 ﻿using System.Threading.Tasks;
-using Limbo.DataAccess.Services;
-using Limbo.DataAccess.Services.Crud;
-using Limbo.DataAccess.Services.Models;
-using Limbo.DataAccess.Settings;
-using Limbo.DataAccess.UnitOfWorks;
+using Limbo.EntityFramework.Services;
+using Limbo.EntityFramework.Services.Crud;
+using Limbo.EntityFramework.Services.Models;
+using Limbo.EntityFramework.Settings;
+using Limbo.EntityFramework.UnitOfWorks;
 using Limbo.Subscriptions.Persistence.SubscriptionSystems.Models;
 using Limbo.Subscriptions.Persistence.SubscriptionSystems.Repositories;
 using Microsoft.Extensions.Logging;
@@ -14,7 +14,7 @@ namespace Limbo.Subscriptions.SubscriptionSystems.Services {
     public class SubscriptionSystemService : CrudServiceBase<SubscriptionSystem, ISubscriptionSystemRepository>, ISubscriptionSystemService {
 
         /// <inheritdoc/>
-        public SubscriptionSystemService(ISubscriptionSystemRepository repository, ILogger<ServiceBase<ISubscriptionSystemRepository>> logger, DataAccessSettings dataAccessSettings, IUnitOfWork<ISubscriptionSystemRepository> unitOfWork) : base(repository, logger, dataAccessSettings, unitOfWork) {
+        public SubscriptionSystemService(ISubscriptionSystemRepository repository, ILogger<ServiceBase<ISubscriptionSystemRepository>> logger, EntityFrameworkSettings entityFrameworkSettings, IUnitOfWork<ISubscriptionSystemRepository> unitOfWork) : base(repository, logger, entityFrameworkSettings, unitOfWork) {
         }
 
         /// <inheritdoc/>

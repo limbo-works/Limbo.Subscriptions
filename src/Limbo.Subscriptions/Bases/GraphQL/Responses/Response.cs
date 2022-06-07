@@ -1,5 +1,5 @@
 ﻿using System;
-using Limbo.DataAccess.Services.Models;
+using Limbo.EntityFramework.Services.Models;
 
 namespace Limbo.Subscriptions.Bases.GraphQL.Responses {
     /// <summary>

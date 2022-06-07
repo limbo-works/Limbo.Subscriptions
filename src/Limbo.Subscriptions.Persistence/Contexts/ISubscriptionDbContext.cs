@@ -1,4 +1,4 @@
-﻿using Limbo.DataAccess.Contexts.Models;
+﻿using Limbo.EntityFramework.Contexts.Models;
 using Limbo.Subscriptions.Persistence.Categories.Models;
 using Limbo.Subscriptions.Persistence.NewsletterQueues.Models;
 using Limbo.Subscriptions.Persistence.Subscribers.Models;

@@ -1,6 +1,6 @@
 ﻿using Limbo.Subscriptions.Persistence.SubscriptionSystems.Models;
 using Limbo.Subscriptions.Persistence.SubscriptionSystems.Repositories;
-using Limbo.DataAccess.Services.Crud;
+using Limbo.EntityFramework.Services.Crud;
 
 namespace Limbo.Subscriptions.SubscriptionSystems.Services {
     /// <summary>

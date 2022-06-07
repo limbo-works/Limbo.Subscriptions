@@ -1,8 +1,8 @@
 ﻿using System.Threading.Tasks;
 using Limbo.Subscriptions.Persistence.NewsletterQueues.Models;
 using Limbo.Subscriptions.Persistence.NewsletterQueues.Repositories;
-using Limbo.DataAccess.Services.Crud;
-using Limbo.DataAccess.Services.Models;
+using Limbo.EntityFramework.Services.Crud;
+using Limbo.EntityFramework.Services.Models;
 
 namespace Limbo.Subscriptions.NewsletterQueues.Services {
     /// <summary>

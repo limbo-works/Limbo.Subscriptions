@@ -1,13 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using Limbo.DataAccess.Models;
+using Limbo.EntityFramework.Models;
 using Limbo.Subscriptions.Persistence.Subscribers.Models;
 
 namespace Limbo.Subscriptions.Persistence.SubscriptionSystems.Models {
+
     /// <summary>
     /// Represents a subscription system
     /// </summary>
-    public class SubscriptionSystem : GenericId {
+    public class SubscriptionSystem : IGenericId {
+
         /// <summary>
         /// The unique id
         /// </summary>
@@ -38,5 +40,7 @@ namespace Limbo.Subscriptions.Persistence.SubscriptionSystems.Models {
                 subscriptionSystem.Subscribers?.ForEach(subscriber => Subscriber.Validate(subscriber, false));
             }
         }
+
     }
+
 }

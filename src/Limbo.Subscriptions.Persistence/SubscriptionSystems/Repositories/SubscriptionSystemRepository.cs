@@ -1,4 +1,4 @@
-﻿using Limbo.DataAccess.Repositories.Crud;
+﻿using Limbo.EntityFramework.Repositories.Crud;
 using Limbo.Subscriptions.Persistence.Contexts;
 using Limbo.Subscriptions.Persistence.SubscriptionSystems.Models;
 using Microsoft.EntityFrameworkCore;

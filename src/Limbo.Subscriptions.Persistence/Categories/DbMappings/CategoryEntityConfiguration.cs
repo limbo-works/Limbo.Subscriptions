@@ -1,4 +1,4 @@
-﻿using Limbo.DataAccess.Conventions;
+﻿using Limbo.EntityFramework.Conventions;
 using Limbo.Subscriptions.Persistence.Categories.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;

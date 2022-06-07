@@ -1,8 +1,8 @@
 ﻿using System.Threading.Tasks;
 using Limbo.Subscriptions.Persistence.Categories.Models;
 using Limbo.Subscriptions.Persistence.Categories.Repositories;
-using Limbo.DataAccess.Services.Models;
-using Limbo.DataAccess.Services.Crud;
+using Limbo.EntityFramework.Services.Models;
+using Limbo.EntityFramework.Services.Crud;
 
 namespace Limbo.Subscriptions.Categories.Services {
     /// <summary>
